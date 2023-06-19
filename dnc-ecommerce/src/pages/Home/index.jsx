@@ -9,11 +9,13 @@ export default function Home() {
   const [products] = useState(PRODUCTS_MOCK);
 
   return (
-    <div>
+    <div className="Home">
       <Header />
-      {products.map((product) => (
-        <Card data={product} key={product.id} />
-      ))}
+      <div className="Home__products">
+        {products.map((product) => (
+          <Card data={product} key={product.id} />
+        ))}
+      </div>
     </div>
   );
 }
